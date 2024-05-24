@@ -1,0 +1,1767 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body , html {
+   overflow-x: hidden;
+}
+ body {
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   margin: 0;
+ }
+ p {
+   margin: 0;
+ }
+ ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+label {
+   font-size: 20px;
+   color: #eceff3;
+   margin-bottom: 20px;
+   font-weight: 600;
+   text-transform: capitalize;
+}
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  border-radius: 0 !important;
+  background-color: transparent;
+  color: #eee;
+
+}
+input[type="text"]::placeholder,
+input[type="date"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder {
+   color: #eee;
+   text-transform: capitalize;
+   font-size: 16px;
+}
+select {
+   width: 100%;
+  height: 55px;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  border-radius: 0 !important;
+  background-color: transparent;
+  color: #cecece;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  height: 177px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  border-radius: 0 !important;
+  background-color: transparent;
+  color: #eee;
+  resize: none;
+  outline: none;
+  text-transform: capitalize;
+}
+textarea::placeholder {
+   color: #eee;
+}
+ /* start-header */
+
+ /* start-toggle */
+ .header-toggle {
+   position: relative;
+ }
+ .header-toggle span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+ }
+
+ .header-toggle span::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+ }
+
+ .header-toggle span::before {
+   content: "";
+   position: absolute;
+   bottom: -5px;
+   right: 0;
+   width: 22px;
+   height: 2px;
+   background-color: #fff;
+ }
+
+ /* stop-toggle */
+
+ .header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 99;
+ }
+
+ .header.fixed {
+    position: fixed;
+    background: rgba(0,0,0,0.50);
+ }
+ .header-menu ul li {
+    text-transform: capitalize;
+    margin: 0 10px;
+ }
+ .header-menu ul li a {
+    display: inline-block;
+    color: #fff!important;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    position: relative;
+ }
+ .header-menu ul li a:hover {
+    color: #ff9615!important;
+ }
+ .header-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 8px;
+    width: 0;
+    height: 2px;
+    background-color: #ff9615;
+    transition: all .4s ease-in-out;
+ }
+ .header-menu ul li a:hover::after {
+    width: 70%;
+ }
+ .header-btn a {
+    display: inline-block;
+    background-color: #ca8e46;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 1px solid #ca8e46;
+    transition: all .4s ease-in-out;
+ }
+ .header-btn a:hover {
+    text-decoration: none;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #ca8e46;
+ }
+ /* stop-header */
+
+
+ /* start-bannar */
+ .section-banner {
+    position: relative;
+    width: 100%;
+ }
+ .banner-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/screenshots.jpg);
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-attachment: fixed;
+ }
+ 
+
+ .banner-overlay {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0,0,0,0.25);
+    padding: 80px 0;
+    color: #ffffff;
+ }
+ .banner-content-pic {
+    width: 600px;
+    height: 156px;
+    margin: auto;
+ }
+ .banner-content-pic img {
+    width: 100%;
+    height: 100%;
+    
+ }
+ .banner-content-btm {
+    display: flex;
+    justify-content: center;
+ }
+ .banner-content-btm h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    margin:  50px 0 10px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(13) infinite alternate,
+        blink 800ms steps(13) infinite normal;
+    border-right: 3px solid black;
+    text-align: center;
+ }
+ @keyframes typewriter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 61%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: black;
+    }
+
+    to {
+        border-color: transparent;
+    }
+}
+ .banner-content p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 16px 271px 0;
+ }
+ /* stop-bannar */
+
+ /* start-hotel-bio */
+ .section-hotel-bio {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    background-color: transparent;
+
+ }
+ .section-hotel-bio .row {
+    max-width: 100%;
+    margin: auto;
+ }
+ .section-hotel-bio .col-md-4 {
+    padding-right: 0;
+    padding-left: 0;
+ }
+ .hotel-time {
+    background-color: #a27238;
+    padding: 20px 0;
+ }
+ .location {
+    background-color: #79552a;
+    padding: 20px 0;
+ }
+ .customer {
+    background-color: #51391c;
+    padding: 20px 0;
+ }
+.hotel-time-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 -10px;
+}
+.hotel-time-icon {
+    padding:  0 10px;
+}
+.hotel-time-icon i {
+    font-size: 45px;
+    color: #fff;
+}
+.hotel-time-content {
+    padding: 0 10px;
+    color: #fff;
+}
+.hotel-time-content h4 {
+   text-transform: uppercase;
+   font-size: 16px;
+   margin: 0;
+   padding: 5px 0;
+}
+.hotel-time-content p {
+    margin: 0;
+}
+/* stop-hotel-bio */
+
+/* start-room */
+.section-room {
+    position: relative;
+}
+.section-room-back {
+   background-image: url(../images/gallery-pic-1.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover cover;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.section-room-overlay {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.13);
+    padding: 100px 0;
+}
+.section-room-overlay h2 {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.room-box {
+   margin: 30px 0 0;
+}
+.col-room {
+   width: 100%;
+   transition: all .4s ease-in-out;
+}
+.col-room-pic {
+   width: 100%;
+}
+.col-room-pic a {
+   display: inline-block;
+   
+   position: relative;
+}
+.col-room-pic a img {
+   width: 100%;
+   
+}
+.col-room-pic a::after {
+   content: "";  
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(../images/gallery-hover-pic.jpg);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   z-index: -9;
+   transition: all .4s ease-in-out;
+}
+.col-room-pic a:hover::after {
+   z-index: 99;
+}
+.col-room-content {
+   background-color: #312b2499;
+   padding: 30px;
+}
+.col-room-content h4 {
+   margin: 0;
+   color: #fff;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+}
+.col-room-content p {
+    margin: 0;
+    color: #fff;
+}
+.global-btn {
+   display: inline-block;
+   border: solid 2px rgba(255, 255, 255, .1);
+   width: 100%;
+   padding: 8px 20px;
+   margin: 18px 0 0;
+   color: #fff;
+   font-weight: 500;
+   font-size: 16px;
+   text-transform: capitalize;
+   text-align: center;
+   letter-spacing: 2px;
+   z-index: 9999; 
+   position: relative;
+}
+.global-btn::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   transition: all .4s ease-in-out;
+   z-index: -9;
+}
+.global-btn:hover::after {
+    background-color: #ca8e46;
+   width: 100%;
+}
+.global-btn:hover {
+   text-decoration: none;
+   color: #fff;
+}
+.col-room:hover {
+   transform: translateY(-10px);
+}
+/* stop-room */
+
+/* start-luxury */
+.section-luxury {
+   padding: 100px 0;
+   background-color: rgb(121, 85, 42);
+}
+.section-luxury .row {
+   align-items: center;
+}
+.luxury-box {
+   display: flex;
+   margin: 0 -10px;
+}
+.luxury-box-lft {
+   padding:  0 10px;
+   margin: 50px 0 0;
+}
+.luxury-lft-pic {
+   width: 260px;
+   height: 390px;
+} 
+
+.luxury-lft-pic img {
+   width: 100%;
+   height: 100%;
+}
+.luxury-box-rgt {
+   padding: 0 10px;
+}
+.luxury-contant h2 {
+   color: #fff;
+   text-transform: capitalize;
+   padding: 0 0 10px;
+   font-size: 40px;
+}
+.luxury-contant p {
+   color: #fff;
+   padding: 10px 0 0;
+   font-size: 18px;
+}
+.luxury-contant .luxury-contant-btn {
+   margin: 10px 0 0;
+}
+.luxury-contant .luxury-contant-btn .global-btn {
+   width: 50%;
+}
+
+/* stop-luxury */
+
+/* start-testimonial */
+.section-testimonial {
+   position: relative;
+   width: 100%;
+}
+.section-testimonial-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover cover;
+   background-attachment: fixed;
+}
+.section-testimonial-overlay {
+   position: relative;
+   padding: 100px 0;
+}
+.section-testimonial-overlay h2 {
+   text-align: center;
+   color: #fff;
+   text-transform: capitalize;
+   font-size: 48px;
+   padding:  0 0 10px;
+}
+.section-testimonial-overlay .testimonial-quote {
+   text-align: center;
+   padding: 10px 0;
+}
+.section-testimonial-overlay .testimonial-quote i {
+   color: #a27238;
+   font-size: 50px;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   color: #fff;
+   text-align: center;
+   font-size: 20px;
+   padding: 20px 160px 0;
+}
+.testimonial-slide .slick-arrow {
+   border: none;
+   background-color: unset;
+   font-size: 0;
+   display: block;
+}
+/* stop-testimonial */
+
+/* start-footer */
+.section-footer {
+   background-color: #000;
+   padding: 20px 0;
+}
+.section-footer .row {
+   justify-content: space-between;
+}
+.footer-copyright p {
+   color: #fff;
+   font-size: 16px;
+}
+.footer-copyright p a {
+   color: #a27238;
+   transition: all .4s ease-in-out;
+}
+.footer-copyright p a:hover {
+   text-decoration: underline;
+   color: #ca8e46;
+}
+.section-footer .col-md-6:last-child {
+   max-width: 30%;
+}
+.footer-media ul {
+   display: flex;
+
+}
+.footer-media ul li {
+   margin: 0 10px;
+
+}
+.footer-media ul li a {
+   color: #fff;
+   display: inline-block;
+}
+.footer-media ul li a i {
+   transition: all .4s ease-in-out;
+   font-size: 18px;
+}
+.footer-media ul li a:hover {
+   color: #ca8e46;
+   padding: 3px 0 0;
+}
+/* stop-footer */
+
+/* start-innar-booking */
+.section-innar-booking {
+   position: relative;
+   width: 100%;
+}
+.section-innar-booking-back {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   min-height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+.innar-booking-overlay {
+   position: relative;
+   padding: 150px 0;
+   background-color: rgba(0, 0, 0, 0.442);
+   width: 100%;
+   height: 100%;
+}
+.innar-booking-overlay h2 {
+   text-align: center;
+   text-transform: capitalize;
+   color: #fff;
+   font-size: 48px;
+   font-weight: 600;
+}
+.innar-booking-box {
+   background-color: #453f38d9;
+      padding: 30px;
+      width: 62%;
+      margin: 45px auto 0;
+}
+.booking-from-btn .global-btn {
+   width: 36%;
+}
+.booking-from-group h4 {
+   font-size: 20px;
+   color: #eceff3;
+   margin-bottom: 20px;
+   font-weight: 600;
+   text-transform: capitalize;
+}
+
+.col-booking-count {
+   margin: 0 0 20px;
+}
+.booking-counter{
+   display: flex;
+}
+.booking-counter .count-b {
+  border: none;
+  outline: none;
+  background-color: #ca8e46;
+  color: #fff;
+  font-size: 20px;
+   width: 30px;
+   height: 30px;
+   padding: 3px 5px 3px 5px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.booking-counter .count-number {
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 0 !important;
+   height: auto;
+   background: transparent;
+   color: #fff;
+   width: 40px;
+   padding: 3px !important;
+   text-align: center;
+   margin: 0 5px 0;
+}
+/* stop-innar-booking */
+
+/* start-about */
+.section-innar-about {
+   position: relative;
+}
+.innar-about-back {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   width: 100%;
+   height: 100%;
+}
+.innar-about-overlay {
+   position: relative;
+   padding: 100px 0;
+   background-color: rgba(0, 0, 0, 0.442);
+}
+.innar-about-overlay .section-luxury {
+   background-color: transparent;
+   padding: 0;
+}
+.innar-about-overlay .section-luxury h2 {
+   text-transform: capitalize;
+   color: #fff;
+   font-size: 48px;
+   text-align: center;
+   padding: 50px 0 60px;
+   font-weight: 600;
+}
+.innar-about-overlay .luxury-contant h2 {
+   text-align: left;
+}
+.innar-about-overlay .luxury-contant .luxury-contant-btn .global-btn {
+   width: 42%;
+   font-weight: 600;
+}
+/* start-about-facility */
+
+.section-facility h2 {
+   text-align: center;
+   text-transform: capitalize;
+   color: #fff;
+   font-size: 48px;
+   font-weight: 600;
+   padding: 100px 0 60px;
+}
+.facility-content-box {
+   display: flex;
+   margin: 0 -5px;
+}
+.facility-pic {
+   padding: 0 5px;
+}
+.facility-pic img {
+   width: 70px;
+   height: 70px;
+   background-color: #ca8e46;
+   padding: 10px;
+}
+.facility-text {
+   padding: 0 5px;
+}
+.facility-text h4 {
+   color: #eee;
+   padding: 0 0 10px;
+   font-size: 22px;
+}
+.facility-text p {
+   color: #eee;
+   font-size: 16px;
+}
+.facility-box .col-md-4 {
+   margin: 0 0 50px;
+}
+/* stop-about-facility */
+/* stop-about */
+
+/* start-blog */
+.section-innar-blog {
+   position: relative;
+
+}
+.innar-blog-back {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+.innar-blog-overlay {
+   position: relative;
+   padding: 100px 0;
+   background-color: rgba(0, 0, 0, 0.442);
+}
+.innar-blog-overlay h2 {
+   text-align: center;
+   color: #fff;
+   font-size: 48px;
+   font-weight: 600;
+   padding: 50px 0;
+   text-transform: capitalize;
+}
+.innar-blog-box .col-md-4 {
+   margin: 0 0 15px;
+}
+.innar-blog-contant-box {
+   position: relative;
+   overflow: hidden;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant {
+   padding: 10%;
+   background-color: rgba(49, 43, 36, 0.50);
+   height: 410px;
+   position: relative;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant span {
+   color: #eee;
+   padding: 0 0 20px;
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   display: block;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant h3 {
+   color: #fff;
+   font-size: 24px;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant p {
+   color: #eee;
+   padding: 20px 0 30px;
+   font-size: 16px;
+   height: 200px;
+   overflow: hidden;
+   /* max-height:200px; */
+   display: block;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant h6 {
+   color: #eee;
+   text-transform: uppercase;
+   font-size: 10px;
+   letter-spacing: 7px;
+   text-align: center;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant-over-pic {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 410px;
+   transition: all .4s ease-in-out;
+}
+.innar-blog-contant-over-pic img {
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transition: all .4s ease-in-out;
+   /* transform: scale(1.1); */
+}
+.innar-blog-contant-box:hover .innar-blog-contant-over-pic img {
+   /* transform: scale(1); */
+   opacity: 1;
+   height: 410px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant {
+   z-index: 9999;
+   height: 410px;
+   padding: 20% 10% 10%;
+}
+.innar-blog-contant-box:hover .innar-blog-contant h3 {
+   padding: 0 0 30px;
+   opacity: 1;
+}
+.innar-blog-contant-box:hover .innar-blog-contant p {
+   /* height: 0; */
+   opacity: 0;
+}
+.innar-blog-contant-box:hover .innar-blog-contant h6 {
+   position: absolute;
+   bottom: 10%;
+   left: 35%;
+}
+/* stop-blog */
+
+/* start-innar-contact */
+.section-innar-contact {
+   position: relative;
+}
+.innar-contact-back {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+.innar-contact-overlay {
+   position: relative;
+   padding: 100px 0;
+   background-color: rgba(0, 0, 0, 0.442);
+}
+.innar-contact-overlay h2 {
+   text-align: center;
+   color: #fff;
+   font-size: 48px;
+   font-weight: 600;
+   padding: 30px 0 50px;
+}
+.innar-contact-box {
+   background-color: rgba(49, 43, 36, 0.50);
+   padding: 30px;
+}
+.innar-contact-address h3 {
+   color: #eceff3;
+   font-size: 18px;
+   letter-spacing: 3px;
+   text-transform: uppercase;
+   padding: 0 0 15px;
+}
+.innar-contact-address-box span {
+   display: block;
+   padding: 0 0 5px;
+   margin: 0 0 5px;
+   border-bottom: solid 1px rgba(255, 255, 255, .1);
+   color: #fff;
+   font-size: 15px;
+   font-weight: 300;
+}
+.innar-contact-address-box span strong {
+   color: #ca8e46;
+   display: inline-block;
+   font-size: 16px;
+   text-transform: capitalize;
+   width: 70px;
+}
+.innar-contact-from {
+   margin: 30px 0 0;
+}
+.innar-contact-from h3 {
+   color: #fff;
+   padding: 0 0 15px;
+   font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.innar-contact-btn .global-btn {
+   width: 44%;
+}
+.contact-mp {
+   width: 100%;
+}
+.contact-mp iframe {
+   width: 100%;
+}
+/* stop-innar-contact */
+
+
+/* start-responsive */
+@media (max-width: 1199px) {
+   .header-menu ul li {
+      margin: 0 3px;
+  }
+   .banner-overlay {
+      padding: 120px 0 100px;
+   }
+   .banner-content-pic {
+      width: 100%;
+      height:auto
+   }
+   .banner-content-pic img {
+      width: 477px;
+      height: auto;
+   }
+   .banner-content-btm h1 {
+      font-size: 35px;
+      margin: 25px 0 10px;
+   }
+   .banner-content p {
+      padding: 26px 164px 0;
+   }
+   .hotel-time-icon i {
+      font-size: 40px;
+   }
+   .section-room-overlay {
+         padding: 72px 0;
+   }
+   
+   .col-room-content {
+      padding: 30px 20px;
+   }
+   .col-room-content h4 {
+      font-size: 20px;
+   }
+   .col-room-content p {
+      font-size: 16px;
+   }
+   .col-room-btn .global-btn {
+      padding: 8px 0px;
+      font-size: 15px;
+      margin: 30px 0 0;
+   }
+   .section-luxury {
+      padding: 68px 0;
+  }
+  .luxury-lft-pic {
+   width: 215px;
+   height: 257px;
+}
+.luxury-contant h2 {
+   font-size: 32px;
+}
+.luxury-contant p {
+   font-size: 17px;
+}
+.luxury-contant .luxury-contant-btn .global-btn {
+   width: 64%;
+   padding: 8px 0px;
+   font-size: 15px;
+}
+.section-testimonial-overlay {
+   padding: 70px 0;
+}
+.section-testimonial-overlay h2 {
+   font-size: 40px;
+}
+.section-testimonial-overlay .testimonial-quote {
+   padding: 5px 0;
+}
+.section-testimonial-overlay .testimonial-quote i {
+   font-size: 44px;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   padding: 20px 55px 0;
+}
+.footer-copyright p {
+   font-size: 15px;
+}
+
+/* innar-about-start */
+.innar-about-overlay {
+   padding: 100px 0 50px;
+}
+.innar-about-overlay .section-luxury h2 {
+   font-size: 43px;
+   padding: 0px 0 60px;
+}
+.innar-about-overlay .luxury-contant h2{
+   padding: 0px 0 13px;
+   font-size: 32px;
+}
+.innar-about-overlay .luxury-contant .luxury-contant-btn .global-btn {
+   width: 50%;
+}
+.facility-text h4 {
+   font-size: 20px;
+}
+.facility-text p {
+   font-size: 15px;
+}
+/* innar-about-end */
+
+/* start-booking */
+
+.innar-booking-overlay h2 {
+   font-size: 42px;
+}
+.innar-booking-box {
+   padding: 26px;
+   width: 80%;
+   margin: 35px auto 0;
+}
+label {
+   margin-bottom: 16px;
+}
+input[type="text"], input[type="date"], input[type="email"], input[type="number"], input[type="password"] {
+   height: 50px;
+}
+/* stop-booking */
+
+/* start-blog */
+.innar-blog-overlay {
+   padding: 117px 0 82px;
+}
+.innar-blog-overlay h2 {
+   font-size: 43px;
+   padding: 0px 0 35px;
+}
+.innar-blog-contant {
+   padding: 7%;
+   height: 356px;
+}
+.innar-blog-contant span {
+   padding: 0 0 14px;
+}
+.innar-blog-contant h3 {
+   font-size: 22px;
+}
+.innar-blog-contant p {
+   padding: 14px 0 30px;
+   font-size: 15px;
+   height: 182px;
+}
+.innar-blog-contant-over-pic {
+   height: 356px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant-over-pic img {
+   height: 356px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant {
+   height: 356px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant h6 {
+   left: 27%;
+}
+/* stop-blog */
+
+/* start-contact */
+.innar-contact-overlay h2 {
+   padding: 0px 0 30px;
+   font-size: 42px;
+}
+.innar-contact-btn .global-btn {
+   width: 60%;
+}
+/* stop-contact */
+}
+
+@media (max-width: 991px) {
+   .header-menu ul {
+      margin: 15px auto 0 !important;
+   }
+   .banner-content-pic img {
+      width: 418px;
+      height: auto;
+  }
+  .banner-content-btm h1 {
+   font-size: 35px;
+   margin: 10px 0 10px;
+}
+.banner-overlay {
+   padding: 100px 0 72px;
+}
+.hotel-time-box {
+   margin: 0 -5px;
+}
+.hotel-time-icon {
+   padding: 0 5px;
+}
+.hotel-time-content {
+   padding: 0 5px;
+}
+.hotel-time-content h4 {
+   font-size: 15px;
+}
+.hotel-time-content p {
+   font-size: 14px;
+}
+.section-room-overlay {
+   padding: 72px 0;
+}
+.section-room-overlay h2 {
+   font-size: 36px;
+}
+.col-room-content h4 {
+   font-size: 20px;
+}
+.col-room-content p {
+   font-size: 16px;
+}
+.section-luxury {
+   padding: 65px 0;
+}
+.luxury-contant h2 {
+   font-size: 28px;
+}
+.luxury-contant p {
+   font-size: 16px;
+}
+.section-testimonial-overlay {
+   padding: 63px 0;
+}
+.section-testimonial-overlay h2 {
+   font-size: 37px;
+}
+.section-testimonial-overlay .testimonial-quote i {
+   font-size: 40px;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   padding: 17px 55px 0;
+   font-size: 17px;
+}
+.footer-media ul li {
+   margin: 0 7px;
+}
+
+/* start-innar-about */
+.innar-about-overlay .section-luxury h2 {
+   font-size: 38px;
+}
+.innar-about-overlay .luxury-contant h2 {
+   padding: 0px 0 7px;
+   font-size: 29px;
+}
+.section-facility h2 {
+   font-size: 38px;
+    padding: 80px 0 60px;
+}
+/* stop-innar-about */
+
+/* start-booking */
+.innar-booking-overlay {
+   padding: 83px 0 70px;
+}
+.innar-booking-overlay h2 {
+   font-size: 40px;
+}
+.innar-booking-box {
+   padding: 22px;
+   margin: 30px auto 0;
+}
+label {
+   margin-bottom: 11px;
+   font-size: 19px;
+}
+input[type="text"], input[type="date"], input[type="email"], input[type="number"], input[type="password"] {
+   height: 48px;
+}
+select {
+   height: 48px;
+}
+.booking-from-group h4 {
+   font-size: 18px;
+   margin-bottom: 14px;
+}
+
+/* stop-booking */
+
+/* start-blog */
+.innar-blog-overlay {
+   padding: 68px 0 70px;
+}
+.innar-blog-overlay h2 {
+   font-size: 40px;
+   padding: 0px 0 30px;
+}
+.innar-blog-contant h3 {
+   font-size: 20px;
+}
+.innar-blog-contant p {
+   padding: 14px 0 30px;
+   font-size: 14px;
+   height: 190px;
+}
+/* stop-blog */
+
+/* start-contact */
+.innar-contact-overlay {
+   padding: 68px 0;
+}
+.innar-contact-overlay h2 {
+   padding: 0px 0 18px;
+   font-size: 37px;
+}
+.innar-contact-box {
+   padding: 23px;
+}
+.innar-contact-box .col-md-8 {
+   max-width: 100%;
+   flex: 100%;
+}
+.innar-contact-box .col-md-4 {
+   max-width: 100%;
+   flex: 100%;
+   margin: 20px 0 0;
+}
+.innar-contact-from h3 {
+   font-size: 17px;
+}
+/* stop-contact */
+}
+
+@media (max-width: 767px) {
+   .banner-overlay {
+      padding: 100px 0 63px;
+  }
+   .banner-content-pic img {
+      width: 380px;
+  }
+  .banner-content-btm h1 {
+   font-size: 30px;
+   margin: 33px 0 10px;
+}
+.banner-content p {
+   padding: 26px 46px 0;
+}
+.section-hotel-bio .col-sm-6:last-child {
+   margin: auto;
+}
+.section-room-overlay {
+   padding: 65px 0;
+}
+.section-room-overlay h2 {
+   font-size: 32px;
+}
+.room-box .col-sm-6 {
+   margin: 0 0 15px;
+}
+.room-box .col-sm-6:last-child {
+   margin: auto;
+}
+.col-room-content {
+   padding: 20px 17px;
+}
+.col-room-content h4 {
+   font-size: 19px;
+}
+.col-room-content p {
+   font-size: 15px;
+}
+.col-room-btn .global-btn {
+   font-size: 14px;
+}
+.section-luxury {
+   padding: 63px 0;
+}
+.section-testimonial-overlay h2 {
+   font-size: 35px;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   padding: 17px 35px 0;
+   font-size: 16px;
+}
+.section-footer .row {
+   flex-direction: column-reverse;
+   justify-content: center;
+}
+.section-footer .col-md-6:last-child {
+   margin: 0 0 10px;
+   max-width: 100%;
+}
+.footer-copyright p {
+   text-align: center;
+}
+.footer-media ul {
+   justify-content: center;
+}
+
+/* start-innar-about */ 
+.innar-about-overlay .section-luxury h2 {
+   font-size: 33px;
+   padding: 0px 0 18px;
+   text-align: center;
+}
+.luxury-lft-pic {
+   width: 234px;
+   height: 244px;
+}
+.luxury-contant {
+   margin: 20px 0 0;
+   text-align: center;
+}
+.section-facility h2 {
+   font-size: 33px;
+   padding: 72px 0 60px;
+}
+
+/* stop-innar-about */
+
+/* start-booking */
+.logo img {
+   width: 105px;
+}
+.innar-booking-overlay {
+   padding: 68px 0 65px;
+}
+.innar-booking-overlay h2 {
+   font-size: 33px;
+}
+.innar-booking-box {
+   padding: 18px;
+   width: 90%;
+   margin: 23px auto 0;
+}
+label {
+   font-size: 17px;
+}
+.booking-from-group h4 {
+   font-size: 17px;
+   margin-bottom: 12px;
+}
+.booking-counter .count-b {
+   width: 28px;
+   height: 28px;
+   padding: 3px 0px 3px 0px;
+}
+.booking-counter .count-number {
+   width: 30px;
+   font-size: 14px;
+}
+input[type="text"], input[type="date"], input[type="email"], input[type="number"], input[type="password"] {
+   height: 42px;
+   padding: 8px 10px;
+}
+select {
+   height: 42px;
+   padding: 8px 10px;
+}
+textarea {
+   height: 136px;
+}
+.booking-from-btn .global-btn {
+   width: 40%; 
+   padding: 8px 10px;
+   font-size: 15px;
+   margin: 6px 0 0;
+}
+/* stop-booking */
+
+/* start-blog */
+.innar-blog-overlay {
+   padding: 57px 0 62px;
+}
+.innar-blog-overlay h2 {
+   font-size: 36px;
+   padding: 0px 0 28px;
+}
+.innar-blog-contant {
+   padding: 6%;
+   height: 330px;
+}
+.innar-blog-contant h3 {
+   font-size: 18px;
+}
+.innar-blog-contant p {
+   height: 172px;
+}
+.innar-blog-contant-over-pic {
+   height: 330px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant {
+   height: 330px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant-over-pic img {
+   height: 330px;
+}
+/* stop-blog */
+
+/* start-contact */
+.innar-contact-overlay {
+   padding: 60px 0;
+}
+.innar-contact-overlay h2 {
+   font-size: 34px;
+}
+.innar-contact-address h3 {
+   font-size: 16px;
+}
+.innar-contact-from h3 {
+   font-size: 16px;
+}
+.innar-contact-box .col-md-6:last-child {
+   margin: 20px 0 0;
+}
+.innar-contact-from-group:last-child input {
+   margin: 0;
+}
+.innar-contact-btn .global-btn {
+   width: 48%;
+}
+/* stop-contact */
+}
+
+@media (max-width: 575px) {
+   .logo img {
+      width: 114px;
+   }
+   .banner-content-pic img {
+      width: 340px;
+  }
+  .banner-content-btm h1 {
+   font-size: 26px;
+}
+.hotel-time-icon i {
+   font-size: 28px;
+}
+.hotel-time-content p {
+   font-size: 13px;
+}
+.section-room-overlay {
+   padding: 60px 0;
+}
+.room-box .col-sm-6 {
+   margin: 0 auto 15px;
+   width: 74%;
+}
+.luxury-lft-pic {
+   width: 198px;
+   height: 251px;
+}
+.luxury-contant {
+   margin: 23px 0 0;
+    text-align: center;
+}
+.luxury-contant h2 {
+   font-size: 27px;
+}
+.luxury-contant p {
+   font-size: 15px;
+}
+.section-testimonial-overlay {
+   padding: 60px 0;
+}
+.section-testimonial-overlay h2 {
+   font-size: 30px;
+}
+.section-testimonial-overlay .testimonial-quote i {
+   font-size: 34px;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   padding: 10px 28px 0;
+   font-size: 15px;
+}
+
+/* start-innar-about */
+.innar-about-overlay {
+   padding: 87px 0 38px;
+}
+.innar-about-overlay .section-luxury h2 {
+   font-size: 31px;
+}
+.innar-about-overlay .luxury-contant h2 {
+   font-size: 28px;
+}
+.section-facility h2 {
+   font-size: 30px;
+   padding: 65px 0 54px;
+}
+.facility-box .col-md-4 {
+    margin: 0 0 36px;
+}
+.footer-copyright p {
+    font-size: 14px;
+}
+.footer-media ul li {
+   margin: 0 6px;
+}
+.footer-media ul li a i {
+   font-size: 17px;
+}
+.facility-pic img {
+   width: 60px;
+   height: 60px;
+}
+/* stop-innar-about */
+
+/* start-booking */
+.innar-booking-overlay {
+   padding: 64px 0 65px;
+}
+.innar-booking-overlay h2 {
+   font-size: 30px;
+}
+input[type="text"], input[type="date"], input[type="email"], input[type="number"], input[type="password"] {
+   height: 40px;
+   margin-bottom: 16px;
+}
+
+/* stop-booking */
+
+/* start-blog */
+.innar-blog-contant {
+   padding: 5%;
+   height: 300px;
+   width: 80%;
+   margin: 0 auto;
+}
+.innar-blog-contant p {
+   height: 145px;
+}
+.innar-blog-contant-over-pic {
+   height: 300px;
+   width: 80%;
+   left: 10%;
+}
+.innar-blog-contant-box:hover .innar-blog-contant {
+   height: 300px;
+   width: 80%;
+   padding: 20% 6% 10%;
+   margin: 0 auto;
+}
+
+.innar-blog-contant-box:hover .innar-blog-contant-over-pic img {
+   height: 300px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant h6 {
+   left: 34%;
+}
+/* stop-blog */
+
+/* start-contact */
+.innar-contact-overlay h2 {
+   font-size: 32px;
+}
+.innar-contact-btn .global-btn {
+   width: 45%;
+}
+.contact-mp iframe {
+   height: 300px;
+}
+/* stop-contact */
+}
+
+@media (max-width: 479px) {
+   .banner-overlay {
+      padding: 94px 0 63px;
+  }
+  .banner-content-pic img {
+   width: 253px;
+}
+.banner-content-btm h1 {
+   font-size: 22px;
+}
+.banner-content p {
+   padding: 20px 0 0;
+}
+.section-hotel-bio .col-6 {
+   max-width: 100%;
+   flex: 100%;
+}
+.section-room-overlay {
+   padding: 52px 0;
+}
+.room-box .col-sm-6 {
+   width: 87%;
+}
+.col-room-content h4 {
+   font-size: 18px;
+}
+.col-room-content p {
+   font-size: 14px;
+}
+.section-luxury {
+   padding: 56px 0;
+}
+.luxury-lft-pic {
+   width: 132px;
+   height: 168px;
+}
+.luxury-contant h2 {
+   font-size: 24px;
+}
+.section-testimonial-overlay {
+   padding: 50px 0;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   padding: 10px 0 0;
+}
+.section-testimonial-overlay .testimonial-slide .testimonial-slide-box p {
+   padding: 10px 0 0;
+   font-size: 15px;
+}
+.footer-media ul li {
+   margin: 0px 6px;
+}
+.footer-media ul li a i {
+   transition: all .4s ease-in-out;
+   font-size: 16px;
+}
+
+/* start-innar-about */
+.logo img {
+   width: 95px;
+}
+.innar-about-overlay {
+   padding: 70px 0 38px;
+}
+.innar-about-overlay .section-luxury h2 {
+   font-size: 27px;
+}
+.innar-about-overlay .luxury-contant h2 {
+   font-size: 25px;
+   padding: 0px 0 8px;
+}
+.innar-about-overlay .luxury-contant .luxury-contant-btn .global-btn {
+   width: 56%;
+   font-size: 14px;
+}
+.section-facility h2 {
+   font-size: 25px;
+   padding: 46px 0 36px;
+}
+.facility-text h4 {
+   font-size: 18px;
+   padding: 0 0 6px;
+}
+.facility-text p {
+   font-size: 14px;
+}
+.footer-copyright p {
+   font-size: 12px;
+}
+/* stop-innar-about */
+
+/* start-booking */
+.innar-booking-overlay {
+   padding: 60px 0 58px;
+}
+.innar-booking-overlay h2 {
+   font-size: 26px;
+}
+.innar-booking-box {
+   padding: 13px;
+   margin: 18px auto 0;
+}
+label {
+   font-size: 15px;
+   font-weight: 500;
+   margin-bottom: 9px;
+}
+input[type="text"], input[type="date"], input[type="email"], input[type="number"], input[type="password"] {
+   height: 38px;
+   margin-bottom: 15px;
+}
+.col-booking-count {
+   margin: 0 0 15px;
+}
+.booking-from-group h4 {
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+.booking-counter .count-b {
+   width: 26px;
+   height: 26px;
+}
+.booking-counter .count-number {
+   width: 28px;
+   font-size: 13px;
+}
+select {
+   height: 38px;
+   margin-bottom: 16px;
+}
+.booking-from-btn .global-btn {
+   width: 55%;
+   padding: 8px 5px;
+   font-size: 14px;
+   margin: 0px 0 0;
+}
+input[type="text"]::placeholder,
+input[type="date"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder {
+   font-size: 14px;
+}
+/* stop-booking */
+
+/* start-blog */
+.innar-blog-overlay h2 {
+   font-size: 29px;
+   padding: 0px 0 23px;
+}
+.innar-blog-contant {
+   width: 88%;
+}
+.innar-blog-contant p {
+   height: 170px;
+}
+.innar-blog-contant-box:hover .innar-blog-contant h6 {
+   left: 30%;
+}
+/* stop-blog */
+
+/* start-contact */
+.innar-contact-overlay h2 {
+   font-size: 28px;
+   padding: 0px 0 14px;
+}
+.innar-contact-address-box span strong {
+   width: 68px;
+}
+.innar-contact-from {
+   margin: 18px 0 0;
+}
+.innar-contact-from h3 {
+   font-size: 15px;
+}
+.innar-contact-recaptcha {
+   display: none;
+}
+.innar-contact-btn .global-btn {
+   width: 100%;
+   margin: 0px 0 0;
+   padding: 8px 9px;
+   font-size: 15px;
+}
+/* stop-contact */
+}
+/* stop-responsive */
